@@ -41,16 +41,16 @@ import java.util.concurrent.*;
 public final class Schedulers {
     @NonNull
     static final Scheduler SINGLE;
-
+    /** 代表CPU计算密集型的操作, 例如需要大量计算的操作 */
     @NonNull
     static final Scheduler COMPUTATION;
-
+    /** 代表io操作的线程, 通常用于网络,读写文件等io密集型的操作 */
     @NonNull
     static final Scheduler IO;
 
     @NonNull
     static final Scheduler TRAMPOLINE;
-
+    /** 代表一个常规的新线程 */
     @NonNull
     static final Scheduler NEW_THREAD;
 
